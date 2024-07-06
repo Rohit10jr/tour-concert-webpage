@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        /* background-color: blueviolet; */
+        background-color: #f7f7f7;
+        width: 100%;
+        height: 100%;
+        /* scrollbar-width: none; */
+        font-family: sans-serif;
+        overflow-x: hidden;
+        /* color: white; */
+      }
+
+      /* temporary a tag css */
+
+      .gradient-button {
+        background: linear-gradient(90deg, #2dd26d, #2cb9cc);
+        border: none;
+        color: white;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+      }
+
+      nav {
+        width: 100%;
+        height: 10vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+      }
+
+      nav a {
+        text-decoration: none;
+        font-size: 30px;
+        padding: 20px;
+        color: white;
+      }
+
+      .nav-left,
+      .nav-right {
+        width: 50%;
+        /* flex-wrap: none; */
+      }
+
+      .nav-right {
+        display: flex;
+        /* align-items: end; */
+        justify-content: end;
+        padding-inline-end: 20px;
+      }
+
+      .nav-left {
+        align-items: start;
+        justify-content: start;
+      }
+
+      /* first image */
+      .first-sec {
+        /* height: 90vh;
+        width: 100%; */
+        background-color: coral;
+        height: 90vh;
+      }
+
+      .img1 {
+        height: 90vh;
+        width: 100%;
+      }
+
+      .la-text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        /* font-size: 40px; */
+        color: white;
+        bottom: 100px;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        /* display: block; */
+        /* padding-bottom: 100px; */
+        /* left: 50%; */
+        /* bottom: 40px; */
+      }
+
+      .first-title {
+        font-size: 40px;
+        /* display: block; */
+      }
+
+      .first-p {
+        font-size: 15px;
+      }
+
+      /* fifth section */
+      .fifth-sec {
+        /* width: 100%;
+        height: 90vh; */
+      }
+
+      .img3 {
+        width: 100%;
+        height: 100vh;
+      }
+
+      /* .contact-sec {
+        display: flex;
+        width: 100%;
+        height: 70vh;
+        justify-content: center;
+      } */
+
+      /* .contact-div {
+        background-color: rgb(255, 145, 0);
+        height: 70vh;
+        max-width: 800px;
+        border: 2px dotted plum;
+        display: flex;
+        justify-content: center;
+      } */
+
+      /* second section */
+
+      .second-sec {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+      }
+
+      .second-div {
+        /* background-color: rgb(0, 255, 200); */
+        height: 100vh;
+        max-width: 800px;
+        width: 100%; /* Ensure the div takes full width of the container */
+        /* border: 5px dotted rgb(229, 255, 0); */
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .second-title,
+      .second-para,
+      .second-card {
+        border: 2px solid blue;
+        /* width: 100%; */
+      }
+
+      .second-title {
+        height: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+      }
+
+      .second-title span {
+        padding: 10px;
+      }
+
+      .second-para {
+        height: 25%;
+        font-size: 16px;
+        padding: 15px;
+      }
+
+      .second-card {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .image-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 55px;
+      }
+
+      .bandname {
+        padding-block: 20px;
+      }
+
+      .bandimage {
+        width: 150px;
+        border-radius: 5px;
+        /* padding-inline: 100px; */
+      }
+
+      /* contact-section */
+
+      .contact-sec {
+        display: flex;
+        width: 100%;
+        height: 70vh;
+        justify-content: center;
+      }
+
+      .contact-div {
+        background-color: rgb(255, 145, 0);
+        height: 70vh;
+        max-width: 800px;
+        width: 100%; /* Ensure the div takes full width of the container */
+        border: 2px dotted plum;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        /* align-items: center; */
+        flex-grow: 1; /* Allow the div to grow within the flex container */
+      }
+
+      .contact-title,
+      .contact-form {
+        height: 50%;
+        width: 100%;
+        color: black;
+      }
+
+      .contact-title {
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        /* padding: 20px; */
+      }
+
+      .contact-title span {
+        padding-block: 10px;
+      }
+
+      .contact-form {
+        background-color: brown;
+        display: flex;
+      }
+
+      .contact-left,
+      .contact-right {
+        height: 100%;
+        width: 50%;
+        border: 2px solid yellow;
+        color: whitesmoke;
+      }
+
+      .contact-left {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-left span {
+        padding-block: 5px;
+      }
+
+      /* footer and contact section  */
+
+      .footer-sec {
+        height: 32vh;
+        width: 100%;
+        background-color: #f7f7f7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .footer-img {
+        padding: 17px;
+      }
+      .img-svg {
+        padding-inline: 2px;
+      }
+
+      .footer-note p {
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <a href="">Home </a>
+          <a href="">Band</a>
+          <a href="">Tour</a>
+          <a href="">Contact</a>
+          <a href="">More</a>
+        </div>
+        <div class="nav-right">
+          <a class="gradient-button" href="">Search</a>
+        </div>
+        <!-- <a href="">contact</a> -->
+      </nav>
+    </header>
+    <div class="container">
+      <section class="first-sec">
+        <img class="img1" src="/images/losangels.jpg" alt="" />
+        <div class="la-text">
+          <span class="first-title">hello world</span>
+          <span class="first-p">We had best time playing at venice beach!</span>
+        </div>
+      </section>
+
+      <section class="second-sec">
+        <div class="second-div">
+          <div class="second-title">
+            <span class="second-span"><h2>T H E B A N D</h2></span>
+            <span class="second-span">we love music</span>
+          </div>
+          <div class="second-para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+            deleniti dolores repellat pariatur, veritatis error quam accusamus
+            nihil provident! Nesciunt, beatae. Distinctio modi minima sunt
+            laudantium, blanditiis corporis. Sapiente ipsa exercitationem unde
+            quasi deserunt dolorum! Ratione, soluta dolorem. Iusto eos ab quidem
+            officia rerum totam! Consectetur sint quae necessitatibus dolorum
+            aliquam enim quo ducimus ipsa voluptatem aut error eligendi, a
+            officia vero quasi ad totam illum modi nulla delectus earum
+            laudantium possimus magnam. Sit totam doloremque odio dolorem, nobis
+            exercitationem. Consectetur deserunt nisi nostrum accusamus fugit,
+            dignissimos voluptates, iste, commodi quia recusandae perferendis
+            illo asperiores eligendi delectus officia placeat veritatis.
+          </div>
+          <div class="second-card">
+            <div class="image-card">
+              <span class="bandname">Name</span>
+              <img class="bandimage" src="/images/bandmember.jpg" alt="" />
+            </div>
+            <div class="image-card">
+              <span class="bandname">Name</span>
+              <img class="bandimage" src="/images/bandmember.jpg" alt="" />
+            </div>
+            <div class="image-card">
+              <span class="bandname">Name</span>
+              <img class="bandimage" src="/images/bandmember.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-sec">
+        <div class="contact-div">
+          <div class="contact-title">
+            <span><h2>C O N T A C T</h2></span>
+            <span>Fan? Drop a note!</span>
+          </div>
+          <div class="contact-form">
+            <div class="contact-left">
+              <span>
+                <img src="" alt="" />
+                <!-- <p class="ptag">Chicago, Us</p> -->
+                Chicago, Us
+              </span>
+              <span>
+                <img src="" alt="" />
+                <!-- <p>Phone: +00151515</p> -->
+                Phone: +00151515
+              </span>
+              <span>
+                <img src="" alt="" />
+                <!-- <p>Email: mail@mail.com</p> -->
+                Email: mail@mail.com
+              </span>
+            </div>
+            <div class="contact-right">
+              <input type="text" />
+              <input type="text" />
+              <input type="text" />
+              <a href=""></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fifth-sec">
+        <img class="img3" src="/images/map.jpg" alt="" />
+      </section>
+
+      <footer>
+        <div class="footer-sec">
+          <div class="footer-img">
+            <img class="img-svg" src="/images/icon-facebook.svg" alt="" />
+            <img class="img-svg" src="/images/icon-youtube.svg" alt="" />
+            <img class="img-svg" src="/images/icon-twitter.svg" alt="" />
+            <img class="img-svg" src="/images/icon-pinterest.svg" alt="" />
+            <img class="img-svg" src="/images/icon-instagram.svg" alt="" />
+          </div>
+          <div class="footer">
+            <p>Powered By W3.CSS</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

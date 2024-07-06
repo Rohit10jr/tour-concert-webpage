@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(141, 141, 141);
+        display: flex;
+        justify-content: center;
+      }
+
+      .inner {
+        height: 100%;
+        max-width: 800px;
+        width: 100%;
+        /* border: 5px solid rgb(255, 123, 123); */
+        background-color: rgb(0, 0, 0);
+      }
+
+      .low {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* padding: 20px; */
+      }
+
+      .card {
+        width: 250px;
+        height: 350px;
+        display: flex;
+        margin-block: 30px;
+        /* justify-content: space-evenly; */
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .city-pic,
+      .city-details {
+        height: 50%;
+        width: 100%;
+      }
+
+      .card-pic {
+        background-color: brown;
+      }
+
+      .city-details {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .city-img {
+        width: 100%;
+      }
+
+      .city-details span {
+        display: block;
+        padding-inline: 20px;
+        padding-block: 5px;
+      }
+
+      .buy-btn {
+        background-color: black;
+        color: white;
+        width: 100px;
+        text-align: center;
+        display: block;
+        /* margin: 10px; */
+        padding: 10px;
+        /* padding: 20px; */
+        text-decoration: none;
+      }
+
+      /* .middle {
+        color: rgb(0, 0, 0);
+        background-color: white;
+        height: 90px;
+      }
+
+      .months {
+        padding: 5px;
+        border-bottom: 1px solid gray;
+      } */
+
+      .middle {
+        /* font: "sans serif"; */
+        color: rgb(107, 102, 102);
+        background-color: white;
+        height: 120px;
+        /* Set the height of the container to 270px */
+        display: flex;
+        flex-direction: column; /* Arrange children in a column */
+      }
+
+      .months {
+        padding: 5px;
+        border-bottom: 1px solid gray;
+        flex-grow: 1; /* Allow each div to grow equally */
+        display: flex;
+        align-items: center; /* Center text vertically */
+      }
+
+      .months .span-month {
+        padding-inline: 15px;
+        padding-block: 3px;
+      }
+
+      .sold-btn {
+        color: rgb(255, 255, 255);
+        background-color: red;
+        padding-inline: 15px;
+        padding-block: 3px;
+      }
+
+      .num-btn {
+        color: white;
+        background-color: black;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .november {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+      }
+
+      .top-text {
+        color: white;
+        /* border: 2px solid rgb(0, 255, 42); */
+        /* padding-bottom: 30xp; */
+        margin: 20xp;
+      }
+
+      .top-text span {
+        display: block;
+        color: white;
+        /* align-items: center; */
+        justify-content: centers;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .top-title {
+        padding-top: 50px;
+      }
+
+      .top {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="inner">
+        <div class="top">
+          <div class="top-text">
+            <span class="top-title">TOUR DATES</span>
+            <span>Remember to book your tickets!</span>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="months">
+            <span class="span-month">September</span>
+            <span class="sold-btn">Sold Out</span>
+          </div>
+          <div class="months">
+            <span class="span-month">October</span>
+            <span class="sold-btn">Sold Out</span>
+          </div>
+          <div class="november months">
+            <span class="span-month">November</span>
+            <span class="num-btn">3</span>
+          </div>
+        </div>
+        <div class="low">
+          <div class="card">
+            <div class="city-pic">
+              <img class="city-img" src="/images/newyork.jpg" alt="" />
+            </div>
+            <div class="city-details">
+              <span>
+                <b>New york</b>
+              </span>
+              <span> fri 27 nov 2024</span>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+                nesciunt.
+              </span>
+              <span>
+                <a class="buy-btn" href="">buy tickets</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="city-pic">
+              <img class="city-img" src="/images/paris.jpg" alt="" />
+            </div>
+            <div class="city-details">
+              <span>
+                <b>Paris</b>
+              </span>
+              <span> fri 27 nov 2024</span>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+                nesciunt.
+              </span>
+              <span>
+                <a class="buy-btn" href="">buy tickets</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="city-pic">
+              <img class="city-img" src="/images/sanfran.jpg" alt="" />
+            </div>
+            <div class="city-details">
+              <span>
+                <b>San Francisco</b>
+              </span>
+              <span> fri 27 nov 2024</span>
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+                nesciunt.
+              </span>
+              <span>
+                <a class="buy-btn" href="">buy tickets</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
