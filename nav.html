@@ -14,7 +14,7 @@
       body,
       html {
         /* background-color: blueviolet; */
-        background-color: #f7f7f7;
+        /* background-color: #ff8181; */
         width: 100%;
         height: 100%;
         /* scrollbar-width: none; */
@@ -26,18 +26,23 @@
       /* temporary a tag css */
 
       .gradient-button {
-        background: linear-gradient(90deg, #2dd26d, #2cb9cc);
-        border: none;
+        background: linear-gradient(45deg, #f06, #f93);
+        padding: 10px 20px;
         color: white;
-        padding: 10px 30px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+
+        /* background: linear-gradient(90deg, #2dd26d, #2cb9cc);
         text-align: center;
         text-decoration: none;
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 20px;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.3s ease; */
       }
 
       nav {
@@ -46,23 +51,27 @@
         background-color: black;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        /* flex-wrap: none; */
         /* justify-content: center; */
       }
 
       nav a {
         text-decoration: none;
-        font-size: 30px;
+        font-size: 20px;
         padding: 20px;
         color: white;
       }
 
       .nav-left,
       .nav-right {
-        width: 50%;
+        /* border: 2px solid red; */
+        /* width: 50%; */
         /* flex-wrap: none; */
       }
 
       .nav-right {
+        width: 20%;
         display: flex;
         /* align-items: end; */
         justify-content: end;
@@ -70,8 +79,15 @@
       }
 
       .nav-left {
+        width: 80%;
         align-items: start;
         justify-content: start;
+      }
+
+      .nav-png {
+        width: 15px;
+        /* display: inline-flex; */
+        margin-left: 5px;
       }
 
       /* first image */
@@ -104,7 +120,8 @@
       }
 
       .first-title {
-        font-size: 40px;
+        font-size: 30px;
+        padding-bottom: 20px;
         /* display: block; */
       }
 
@@ -146,6 +163,7 @@
         width: 100%;
         height: 100vh;
         justify-content: center;
+        background-color: #ffffff;
       }
 
       .second-div {
@@ -162,7 +180,7 @@
       .second-title,
       .second-para,
       .second-card {
-        border: 2px solid blue;
+        /* border: 2px solid blue; */
         /* width: 100%; */
       }
 
@@ -178,14 +196,27 @@
         padding: 10px;
       }
 
+      .band-title {
+        font-size: 30px;
+      }
+
+      .band-line {
+        color: gray;
+      }
+
       .second-para {
-        height: 25%;
+        height: 35%;
         font-size: 16px;
         padding: 15px;
+        line-height: 25px;
+        word-spacing: 5px;
+        /* font-weight: 300; */
+        color: rgb(85, 85, 85);
+        font-weight: 200;
       }
 
       .second-card {
-        height: 50%;
+        height: 40%;
         display: flex;
         flex-direction: row;
       }
@@ -208,6 +239,161 @@
         /* padding-inline: 100px; */
       }
 
+      /* TOUR DATES */
+
+      .tour-container {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+      }
+
+      .inner {
+        height: 100%;
+        max-width: 800px;
+        width: 100%;
+        /* border: 5px solid rgb(255, 123, 123); */
+        background-color: rgb(0, 0, 0);
+      }
+
+      .low {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* padding: 20px; */
+      }
+
+      .card {
+        width: 250px;
+        height: 350px;
+        display: flex;
+        margin-block: 30px;
+        /* justify-content: space-evenly; */
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .city-pic,
+      .city-details {
+        height: 50%;
+        width: 100%;
+      }
+
+      .card-pic {
+        background-color: brown;
+      }
+
+      .city-details {
+        background-color: rgb(255, 255, 255);
+        /* display: flex; */
+        /* align-items: center; */
+      }
+
+      .city-img {
+        width: 100%;
+      }
+
+      .city-details span {
+        display: block;
+        padding-inline: 20px;
+        padding-block: 5px;
+      }
+
+      .buy-btn {
+        background-color: black;
+        color: white;
+        width: 100px;
+        text-align: center;
+        display: block;
+        /* margin: 10px; */
+        padding: 10px;
+        /* padding: 20px; */
+        text-decoration: none;
+      }
+
+      /* .middle {
+        color: rgb(0, 0, 0);
+        background-color: white;
+        height: 90px;
+      }
+
+      .months {
+        padding: 5px;
+        border-bottom: 1px solid gray;
+      } */
+
+      .middle {
+        /* font: "sans serif"; */
+        color: rgb(107, 102, 102);
+        background-color: white;
+        height: 120px;
+        /* Set the height of the container to 270px */
+        display: flex;
+        flex-direction: column; /* Arrange children in a column */
+      }
+
+      .months {
+        padding: 5px;
+        border-bottom: 1px solid gray;
+        flex-grow: 1; /* Allow each div to grow equally */
+        display: flex;
+        align-items: center; /* Center text vertically */
+      }
+
+      .months .span-month {
+        padding-inline: 15px;
+        padding-block: 3px;
+      }
+
+      .sold-btn {
+        color: rgb(255, 255, 255);
+        background-color: red;
+        padding-inline: 15px;
+        padding-block: 3px;
+      }
+
+      .num-btn {
+        color: white;
+        background-color: black;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .november {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 30px;
+      }
+
+      .top-text {
+        color: white;
+        /* border: 2px solid rgb(0, 255, 42); */
+        /* padding-bottom: 30xp; */
+        margin: 20xp;
+      }
+
+      .top-text span {
+        display: block;
+        color: white;
+        /* align-items: center; */
+        justify-content: centers;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+
+      .top-title {
+        padding-top: 50px;
+      }
+
+      .top {
+      }
+
       /* contact-section */
 
       .contact-sec {
@@ -217,12 +403,23 @@
         justify-content: center;
       }
 
+      .card-dates {
+        color: rgb(107, 102, 102);
+      }
+
+      .card-para {
+        color: rgb(37, 37, 37);
+        font-weight: 200;
+        line-height: 20px;
+        word-spacing: 3px;
+      }
+
       .contact-div {
-        background-color: rgb(255, 145, 0);
+        /* background-color: rgb(255, 145, 0); */
         height: 70vh;
         max-width: 800px;
         width: 100%; /* Ensure the div takes full width of the container */
-        border: 2px dotted plum;
+        /* border: 2px dotted plum; */
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
@@ -238,7 +435,7 @@
       }
 
       .contact-title {
-        background-color: aquamarine;
+        /* background-color: aquamarine; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -251,7 +448,7 @@
       }
 
       .contact-form {
-        background-color: brown;
+        /* background-color: brown; */
         display: flex;
       }
 
@@ -259,8 +456,8 @@
       .contact-right {
         height: 100%;
         width: 50%;
-        border: 2px solid yellow;
-        color: whitesmoke;
+        /* border: 2px solid yellow; */
+        color: rgb(0, 0, 0);
       }
 
       .contact-left {
@@ -272,6 +469,60 @@
 
       .contact-left span {
         padding-block: 5px;
+      }
+
+      .contact-right span {
+        display: block;
+        padding-bottom: 10px;
+      }
+
+      .first-input {
+        width: 41%;
+        height: 30px;
+        margin-right: 15px;
+        /* justify-content: space-evenly; */
+      }
+
+      .second-input {
+        height: 30px;
+        width: 89%;
+      }
+
+      .contact-right span a {
+        color: white;
+        text-decoration: none;
+        margin-right: 35px;
+        /* height: 20px; */
+        /* width: 100px; */
+        /* border: 2px solid red; */
+        padding-inline: 20px;
+        padding-block: 5px;
+        /* margin-top: 30px; */
+
+        /* display: flex; */
+        text-align: center;
+        justify-content: end;
+        background-color: black;
+      }
+
+      .contact-png {
+        /* padding-top: 10px; */
+        width: 15px;
+        display: inline-flex;
+        margin-right: 20px;
+        /* padding-right: 10px; */
+
+        /* font-size: 20px; */
+      }
+
+      .a-span {
+        /* border: 2px solid red; */
+        display: flex;
+        padding-top: 10px;
+        padding-left: 280px;
+        /* background-color: black; */
+        /* justify-content: end; */
+        /* justify-content: space-around; */
       }
 
       /* footer and contact section  */
@@ -295,17 +546,49 @@
       .footer-note p {
         font-size: 12px;
       }
+
+      /* hover effects  */
+
+      .card:hover .city-img {
+        opacity: 0.6;
+      }
+
+      .card:hover .city-pic,
+      .city-details {
+        height: 50%;
+        width: 100%;
+      }
+      .card:hover .city-details span {
+        padding-block: 5px;
+      }
+
+      .card:hover .buy-btn {
+        background-color: rgb(165, 157, 157);
+        color: black;
+      }
+
+      nav a:hover {
+        background-color: rgb(165, 165, 165);
+        color: black;
+      }
+
+      .image-card:hover {
+        /* border: blue; */
+        background-color: #add8dd;
+      }
     </style>
   </head>
   <body>
     <header>
       <nav>
         <div class="nav-left">
-          <a href="">Home </a>
-          <a href="">Band</a>
-          <a href="">Tour</a>
-          <a href="">Contact</a>
-          <a href="">More</a>
+          <a href="">HOME </a>
+          <a href="">BAND</a>
+          <a href="">TOUR</a>
+          <a href="">CONTACT</a>
+          <a href=""
+            >MORE <img class="nav-png" src="/images/down-red.png" alt=""
+          /></a>
         </div>
         <div class="nav-right">
           <a class="gradient-button" href="">Search</a>
@@ -317,7 +600,7 @@
       <section class="first-sec">
         <img class="img1" src="/images/losangels.jpg" alt="" />
         <div class="la-text">
-          <span class="first-title">hello world</span>
+          <span class="first-title">Los Angles</span>
           <span class="first-p">We had best time playing at venice beach!</span>
         </div>
       </section>
@@ -325,8 +608,8 @@
       <section class="second-sec">
         <div class="second-div">
           <div class="second-title">
-            <span class="second-span"><h2>T H E B A N D</h2></span>
-            <span class="second-span">we love music</span>
+            <span class="second-span band-title"> T H E B A N D </span>
+            <span class="second-span band-line">we love music</span>
           </div>
           <div class="second-para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
@@ -338,9 +621,7 @@
             aliquam enim quo ducimus ipsa voluptatem aut error eligendi, a
             officia vero quasi ad totam illum modi nulla delectus earum
             laudantium possimus magnam. Sit totam doloremque odio dolorem, nobis
-            exercitationem. Consectetur deserunt nisi nostrum accusamus fugit,
-            dignissimos voluptates, iste, commodi quia recusandae perferendis
-            illo asperiores eligendi delectus officia placeat veritatis.
+            exercitationem. Consectetur deserunt
           </div>
           <div class="second-card">
             <div class="image-card">
@@ -359,6 +640,85 @@
         </div>
       </section>
 
+      <div class="tour-container">
+        <div class="inner">
+          <div class="top">
+            <div class="top-text">
+              <span class="top-title">TOUR DATES</span>
+              <span>Remember to book your tickets!</span>
+            </div>
+          </div>
+          <div class="middle">
+            <div class="months">
+              <span class="span-month">September</span>
+              <span class="sold-btn">Sold Out</span>
+            </div>
+            <div class="months">
+              <span class="span-month">October</span>
+              <span class="sold-btn">Sold Out</span>
+            </div>
+            <div class="november months">
+              <span class="span-month">November</span>
+              <span class="num-btn">3</span>
+            </div>
+          </div>
+          <div class="low">
+            <div class="card">
+              <div class="city-pic">
+                <img class="city-img" src="/images/newyork.jpg" alt="" />
+              </div>
+              <div class="city-details">
+                <span>
+                  <b>New york</b>
+                </span>
+                <span class="card-dates"> fri 27 nov 2024</span>
+                <span class="card-para"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+                <span>
+                  <a class="buy-btn" href="">buy tickets</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="city-pic">
+                <img class="city-img" src="/images/paris.jpg" alt="" />
+              </div>
+              <div class="city-details">
+                <span>
+                  <b>Paris</b>
+                </span>
+                <span class="card-dates"> fri 27 nov 2024</span>
+                <span class="card-para"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+                <span>
+                  <a class="buy-btn" href="">buy tickets</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="city-pic">
+                <img class="city-img" src="/images/sanfran.jpg" alt="" />
+              </div>
+              <div class="city-details">
+                <span>
+                  <b>San Francisco</b>
+                </span>
+                <span class="card-dates"> fri 27 nov 2024</span>
+                <span class="card-para"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+                <span>
+                  <a class="buy-btn" href="">buy tickets</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <section class="contact-sec">
         <div class="contact-div">
           <div class="contact-title">
@@ -368,26 +728,38 @@
           <div class="contact-form">
             <div class="contact-left">
               <span>
-                <img src="" alt="" />
+                <img
+                  class="contact-png"
+                  src="/images/maps-and-flags.png"
+                  alt=""
+                />
                 <!-- <p class="ptag">Chicago, Us</p> -->
                 Chicago, Us
               </span>
               <span>
-                <img src="" alt="" />
+                <img class="contact-png" src="/images/phone-logo.png" alt="" />
                 <!-- <p>Phone: +00151515</p> -->
                 Phone: +00151515
               </span>
               <span>
-                <img src="" alt="" />
+                <img class="contact-png" src="/images/email.png" alt="" />
+                <!-- <img class="contact-png" src="/images/envelope.png" alt="" /> -->
                 <!-- <p>Email: mail@mail.com</p> -->
                 Email: mail@mail.com
               </span>
             </div>
             <div class="contact-right">
-              <input type="text" />
-              <input type="text" />
-              <input type="text" />
-              <a href=""></a>
+              <span>
+                <input class="first-input" type="text" placeholder="Name" />
+                <input class="first-input" type="text" placeholder="Email" />
+              </span>
+
+              <span>
+                <input class="second-input" type="text" placeholder="Message" />
+              </span>
+              <span class="a-span">
+                <a href="">SEND</a>
+              </span>
             </div>
           </div>
         </div>

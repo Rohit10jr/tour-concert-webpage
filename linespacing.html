@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .original {
+        width: 300px; /* Assuming a fixed width container for comparison */
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .reduced {
+        width: 300px; /* Same fixed width container */
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 18px; /* Increase font size */
+        line-height: 30px; /* Increase line height */
+        letter-spacing: 10px; /* Optional: adjust letter spacing */
+      }
+
+      .original {
+        width: 300px; /* Fixed width container for comparison */
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .increased-spacing {
+        width: 300px; /* Same fixed width container */
+        border: 1px solid black;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+        word-spacing: 10px; /* Increase spacing between words */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="original">
+      <p>
+        This is an example paragraph. It has a certain number of words and takes
+        up a specific amount of space. The goal is to reduce the number of words
+        but maintain the same visual space.
+      </p>
+    </div>
+
+    <div class="reduced">
+      <p>
+        This is an example. It takes up space similarly to a longer paragraph by
+        using CSS adjustments.
+      </p>
+    </div>
+
+    <div class="original">
+      <p>This is an example paragraph with normal word spacing.</p>
+    </div>
+
+    <div class="increased-spacing">
+      <p>This is an example paragraph with increased word spacing.</p>
+    </div>
+  </body>
+</html>
